@@ -1,4 +1,4 @@
-weather APP              
+#weather APP              
 Aplikacja pogodowa  wykorzystująca:
 * html
 * CSS
