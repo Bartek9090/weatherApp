@@ -2,8 +2,14 @@
     --main-font-family: 'Teko', sans-serif;
 }
 
-html[data-theme="Light"] {
-    --header-color: #ffffff;
+html[data-theme="day"] {
+    --header-color: #fff;
+    --switcher-icon-color: #000;
+}
+
+html[data-theme="night"] {
+    --header-color: #fff;
+    --switcher-icon-color: #fff;
 }
 
 * {
@@ -26,6 +32,8 @@ body {
 
 .weather h1 {
     color: var(--header-color);
+    font-size: 50px;
+    margin: 0 0 30px 0;
 }
 
 .weather video {
@@ -37,4 +45,46 @@ body {
     min-height: 100%;
     z-index: -1;
     object-fit: cover;
+}
+
+/*  SWITCHER */
+
+.switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+    color: #fff;
+    color: var(--switcher-icon-color);
+}
+
+.switcher .night {
+    color: #fff;
+}
+
+.switcher div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.switcher.day .day {
+    display: none;
+}
+
+.switcher.night .night {
+    display: none;
+}
+
+/*  .theme day */
+
+html[data-theme="day"] .weather video.night {
+    display: none;
 }
