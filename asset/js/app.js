@@ -77,12 +77,11 @@ weather_form.addEventListener('submit', (event) => {
             // show next days by city
 
             view += `<div class="days-info">Next day weather: </div>`;
-
             view += `<div class="days">`;
             data.forecast.forecastday.forEach((day) => {
                 view += `<div class="day">`;
                 view += `<div class="date">${day.date}</div>`;
-                view += `<div class="icon"><img src="${day.day.condition.icon}" alt="${day.day.condition.icon}"></div>`;
+                view += `<div class="icon"><img src="${day.day.condition.icon}" alt="${day.day.condition.text}"></div>`;
                 view += `<div class="temp">"${day.day.avgtemp_c}<sup>o</sup>C</div>`;
                 view += `</div>`;
             })
