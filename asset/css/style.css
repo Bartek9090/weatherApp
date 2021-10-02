@@ -2,16 +2,24 @@
 
 :root {
     --main-font-family: 'Teko', sans-serif;
+    --error-bg: #a80c07;
+    --error-text-color: #fff;
 }
 
 html[data-theme="day"] {
     --header-color: #fff;
     --switcher-icon-color: #000;
+    --main-info-color: #fff;
+    --loader-color: #000;
+
 }
 
 html[data-theme="night"] {
     --header-color: #fff;
     --switcher-icon-color: #fff;
+    --main-info-color: #fff;
+    --loader-color: #fff;
+
 }
 
 * {
@@ -36,6 +44,19 @@ body {
     color: var(--header-color);
     font-size: 50px;
     margin: 0 0 30px 0;
+}
+
+.weather .city {
+    max-width: 600px;
+    min-width: 300px;
+    width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+    border: 0;
+    outline: none;
+    font-size: 16px;
+    border-radius: 4px;
+    margin: 0 0 40px 0;
 }
 
 .weather video {
@@ -89,4 +110,111 @@ body {
 
 html[data-theme="day"] .weather video.night {
     display: none;
+}
+
+/*  Weather display element */
+
+.main-info {
+    display: flex;
+    align-items: flex-start;
+    color: var(--main-info-color);
+    font-size: 18px;
+}
+
+.main-info .temp {
+    margin: 0 20px;
+    display: flex;
+}
+
+.main-info .temp-value {
+    font-weight: 700;
+    font-size: 50px;
+    margin: 0 10px 0 0;
+
+}
+
+.main-info .temp ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-info .temp ul li.active {
+    font-weight: 700;
+}
+
+.main-info .temp ul li::before {
+    content: "|";
+    padding: 0 6px;
+
+}
+
+.main-info .temp ul li:first-child::before {
+    display: none;
+}
+
+.main-info .info p {
+    margin: 0 0 4px 0;
+    font-size: 15px;
+}
+
+.main-info .info p:last-of-type {
+    margin: 0;
+}
+
+/* error */
+
+.error {
+    background-color: var(--error-bg);
+    color: var(--error-text-color);
+    font-size: 14px;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* loader */
+
+.loader {
+    display: none;
+}
+
+.lds-ripple {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-ripple div {
+    position: absolute;
+    border: 4px solid var(--loader-color);
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+}
+
+@keyframes lds-ripple {
+    0% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+
+    100% {
+        top: 0px;
+        left: 0px;
+        width: 72px;
+        height: 72px;
+        opacity: 0;
+    }
 }

@@ -23,10 +23,16 @@
     <section class="weather">
         <video src="asset/video/video.mp4" class="day" autoplay muted loop></video>
         <video src="asset/video/pexels-nicolas-becker-5700949.mp4" class="night" autoplay muted loop></video>
+        <div class="loader">
+            <div class="lds-ripple">
+                <div></div>
+                <div></div>
+            </div>
+        </div>
 
         <h1>Weather</h1>
         <form action="" class="weather-form">
-            <input type="text" class="city" placeholder="Write a city and press ENTER">
+            <input type="text" class="city" placeholder="Write a city and press ENTER" value="London">
         </form>
 
         <div class="data-from-api">
