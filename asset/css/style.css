@@ -42,7 +42,7 @@ body {
 
 .weather h1 {
     color: var(--header-color);
-    font-size: 50px;
+    font-size: 130px;
     margin: 0 0 30px 0;
 }
 
@@ -114,6 +114,11 @@ html[data-theme="day"] .weather video.night {
 
 /*  Weather display element */
 
+.info {
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
 .main-info {
     display: flex;
     align-items: flex-start;
@@ -161,6 +166,34 @@ html[data-theme="day"] .weather video.night {
 
 .main-info .info p:last-of-type {
     margin: 0;
+}
+
+/* Try to ostilate additional day */
+
+.days-info {
+    color: var(--main-info-color);
+    font-size: 22px;
+    /* padding-bottom: 5px; */
+}
+
+.days {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    color: var(--main-info-color);
+    font-size: 18px;
+    padding: 0;
+}
+
+.days .temp {
+    padding-left: 10px;
+}
+
+
+/* Icon try to reduce space between icon and temp */
+
+.icon {
+    padding-bottom: 0;
 }
 
 /* error */

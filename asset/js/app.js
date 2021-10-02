@@ -40,6 +40,7 @@ weather_form.addEventListener('submit', (event) => {
             let view = '';
 
             view += `<div class="main-info">`;
+
             //icon
             view += `<div class="icon">`;
             view += `<img src="${data.current.condition.icon}" alt="${data.current.condition.text}">`
@@ -47,18 +48,15 @@ weather_form.addEventListener('submit', (event) => {
             //temp
             view += `<div class="temp">`;
 
-
-
             view += `<div class="temp-value" data-cel="${data.current.temp_c}" data-far="${data.current.temp_f}" >`;
             view += data.current.temp_c;
-
-
             view += `</div>`;
-            view += `<ul>
-                                <li class="change-temp active"><sup>o</sup>C</li>
-                                <li class="change-temp "><sup>o</sup>F</li>
 
-            </ul>`;
+            view += `<ul>
+                <li class="change-temp active"><sup>o</sup>C</li>
+                <li class="change-temp"><sup>o</sup>F</li>
+
+            </ul>`
 
             view += `</div>`;
 
@@ -81,7 +79,7 @@ weather_form.addEventListener('submit', (event) => {
             data.forecast.forecastday.forEach((day) => {
                 view += `<div class="day">`;
                 view += `<div class="date">${day.date}</div>`;
-                view += `<div class="icon"><img src="${day.day.condition.icon}" alt="${day.day.condition.text}"></div>`;
+                view += `<div class="icon"><img src="${day.day.condition.icon}" alt="${day.day.condition.tex}"></div>`;
                 view += `<div class="temp">"${day.day.avgtemp_c}<sup>o</sup>C</div>`;
                 view += `</div>`;
             })
