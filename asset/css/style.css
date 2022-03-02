@@ -38,6 +38,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-inline: 20px;
 }
 
 .weather h1 {
@@ -84,8 +88,8 @@ body {
     border-radius: 4px;
     background-color: rgba(0, 0, 0, 0.3);
     font-size: 20px;
-    color: #fff;
     color: var(--switcher-icon-color);
+    z-index: 9;
 }
 
 .switcher .night {
@@ -249,5 +253,11 @@ html[data-theme="day"] .weather video.night {
         width: 72px;
         height: 72px;
         opacity: 0;
+    }
+}
+
+@media (max-width: 568px) {
+    .weather h1 {
+        font-size: 70px;
     }
 }

@@ -1,3 +1,5 @@
+// switcher for theames day night
+
 let root_element = document.documentElement;
 let switcher = document.querySelector('.switcher')
 
