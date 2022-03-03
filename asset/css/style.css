@@ -1,5 +1,3 @@
-/* todo oscylować placeholdera */
-
 :root {
     --main-font-family: 'Teko', sans-serif;
     --error-bg: #a80c07;
@@ -172,12 +170,11 @@ html[data-theme="day"] .weather video.night {
     margin: 0;
 }
 
-/* Try to ostilate additional day */
+/* Style additional day */
 
 .days-info {
     color: var(--main-info-color);
     font-size: 22px;
-    /* padding-bottom: 5px; */
 }
 
 .days {

@@ -117,4 +117,3 @@ function hideLoader() {
     }, 100)
 }
 
-// flex ułożenie elementów wycentrowanie
