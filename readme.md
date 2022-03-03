@@ -1,6 +1,6 @@
-# weather APP              
-Aplikacja pogodowa  wykorzystująca:
-* html
+# Weather APP              
+Weather APP using:
+* HTML
 * CSS
 * SASS
 * JS
