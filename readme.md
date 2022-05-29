@@ -12,9 +12,9 @@ The weather information is returned from the API.
 * google fonts family Teko 300, 400, 700, 
 * font awsome
 
-### Installing
-git clone https://github.com/Bartek9090/weatherApp  <br/>
-To run this project, install it locally, and execute a program.
+### Running
+
+https://bartek9090.github.io/weatherApp/
 
 ## Help
 
