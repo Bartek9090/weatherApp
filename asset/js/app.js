@@ -16,7 +16,7 @@ switcher.addEventListener('click', () => {
     }
 })
 
-let APIURL = "https://cors-anywhere.herokuapp.com/http://api.weatherapi.com/v1/forecast.json?key=21d65c223c50438b841180651213009%20&days=5&q="
+let APIURL = "http://api.weatherapi.com/v1/forecast.json?key=21d65c223c50438b841180651213009%20&days=5&q="
 let weather_form = document.querySelector('.weather-form');
 let data_container = document.querySelector('.data-from-api')
 let loader = document.querySelector('.loader')
