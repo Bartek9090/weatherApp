@@ -12,9 +12,6 @@ The weather information is returned from the API.
 * google fonts family Teko 300, 400, 700, 
 * font awsome
 
-### Running
-
-https://bartek9090.github.io/weatherApp/
 
 ## Help
 
